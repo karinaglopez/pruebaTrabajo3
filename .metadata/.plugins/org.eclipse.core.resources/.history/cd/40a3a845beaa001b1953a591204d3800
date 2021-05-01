@@ -50,7 +50,7 @@ public class Ciudad {
         return crearLineaHorizonte(pi, pd);  
     }
     
-private LineaHorizonte crearLineaHorizonte(int pi, int pd)
+public LineaHorizonte crearLineaHorizonte(int pi, int pd)
 {
 LineaHorizonte linea = new LineaHorizonte(); // LineaHorizonte de salida
 Edificio edificio = new Edificio();    

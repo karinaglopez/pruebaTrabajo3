@@ -24,7 +24,7 @@ public class LineaHorizonteFussion {
         vaciarS2();
         return this.salida;
     }
-    private void comenzarFussion() {
+    public void comenzarFussion() {
         Punto p1 = new Punto();       
         Punto p2 = new Punto();  
         Punto paux = new Punto();
