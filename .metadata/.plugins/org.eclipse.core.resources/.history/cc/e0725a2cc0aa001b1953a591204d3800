@@ -25,20 +25,20 @@ public class LineaHorizonteFussion {
         return this.salida;
     }
     private void comenzarFussion() {
-        Punto p1 = new Punto();       
-        Punto p2 = new Punto();  
-        Punto paux = new Punto();
+        Punto p1 = crearPunto();       
+        Punto p2 = crearPunto();  
+        Punto paux = crearPunto();
     	
         while ((!this.s1.isEmpty()) && (!this.s2.isEmpty())) 
         {
-            paux = new Punto();  // Inicializamos la variable paux
+            paux = crearPunto();  // Inicializamos la variable paux
             p1 = s1.getPunto(0); // guardamos el primer elemento de s1
             p2 = s2.getPunto(0); // guardamos el primer elemento de s2
             comprobarValorX(p1,p2);
         }
     }
     private void vaciarS1() {
-    	Punto paux = new Punto();
+    	Punto paux = crearPunto();
         while ((!this.s1.isEmpty())) //si aun nos quedan elementos en el s1
         {
             paux=this.s1.getPunto(0); // guardamos en paux el primer punto
@@ -47,7 +47,7 @@ public class LineaHorizonteFussion {
         }
     }
     private void vaciarS2() {
-    	Punto paux = new Punto();
+    	Punto paux = crearPunto();
         while((!this.s2.isEmpty())) //si aun nos quedan elementos en el s2
         {
             paux=this.s2.getPunto(0); // guardamos en paux el primer punto
@@ -56,55 +56,55 @@ public class LineaHorizonteFussion {
         }
     }
     private void actualizarPunto(Punto paux) {
-        if (obtenerY(paux)!=this.prev) // si este maximo no es igual al del segmento anterior
+        if (paux.getY()!=this.prev) // si este maximo no es igual al del segmento anterior
         {
             this.salida.addPunto(paux); // añadimos el punto al LineaHorizonte de salida
             this.prev = paux.getY();    // actualizamos prev
         }
     }
     private void actualizarS1(Punto p1) {
-    	Punto paux = new Punto();
-    	paux.setX(obtenerX(p1));                // guardamos en paux esa X
+    	Punto paux = crearPunto();
+    	paux.setX(p1.getX());                // guardamos en paux esa X
         paux.setY(Math.max(p1.getY(), this.s2y)); // y hacemos que el maximo entre la Y del s1 y la altura previa del s2 sea la altura Y de paux
         
         actualizarPunto(paux);
 
-        this.s1y = obtenerY(p1);   // actualizamos la altura s1y
+        this.s1y = p1.getY();   // actualizamos la altura s1y
         this.s1.borrarPunto(0); // en cualquier caso eliminamos el punto de s1 (tanto si se añade como si no es valido)
     
     }
     private void actualizarS2(Punto p2){
-    	Punto paux =new Punto();
-        paux.setX(obtenerX(p2));                // guardamos en paux esa X
-        paux.setY(Math.max(obtenerY(p2), this.s1y)); // y hacemos que el maximo entre la Y del s2 y la altura previa del s1 sea la altura Y de paux
+    	Punto paux = crearPunto();
+        paux.setX(p2.getX());                // guardamos en paux esa X
+        paux.setY(Math.max(p2.getY(), this.s1y)); // y hacemos que el maximo entre la Y del s2 y la altura previa del s1 sea la altura Y de paux
 
         actualizarPunto(paux);
     
-        this.s2y = obtenerY(p2);   // actualizamos la altura s2y
+        this.s2y = p2.getY();   // actualizamos la altura s2y
         this.s2.borrarPunto(0); // en cualquier caso eliminamos el punto de s2 (tanto si se añade como si no es valido)
     }
     private void actualizarS1yS2(Punto p1, Punto p2) {
-        if ((obtenerY(p1) > obtenerY(p2)) && (obtenerY(p1)!=this.prev)) // guardaremos aquel punto que tenga la altura mas alta
+        if ((p1.getY() > p2.getY()) && (p1.getY()!=this.prev)) // guardaremos aquel punto que tenga la altura mas alta
         {
             this.salida.addPunto(p1);
             this.prev = p1.getY();
         }
-        if ((obtenerY(p1) <= obtenerY(p2)) && (obtenerY(p2)!=prev))
+        if ((p1.getY() <= p2.getY()) && (p2.getY()!=prev))
         {
             this.salida.addPunto(p2);
-            this.prev = obtenerY(p2);
+            this.prev = p2.getY();
         }
-        this.s1y = obtenerY(p1);   // actualizamos la s1y e s2y
-        this.s2y = obtenerY(p2);
+        this.s1y = p1.getY();   // actualizamos la s1y e s2y
+        this.s2y = p2.getY();
         this.s1.borrarPunto(0); // eliminamos el punto del s1 y del s2
         this.s2.borrarPunto(0);
     }
     private void comprobarValorX(Punto p1, Punto p2) {
-        if (obtenerX(p1) < obtenerX(p2)) // si X del s1 es menor que la X del s2
+        if (p1.getX() < p2.getX()) // si X del s1 es menor que la X del s2
         {
         	actualizarS1(p1);
         }
-        else if (obtenerX(p1) > obtenerX(p2)) // si X del s1 es mayor que la X del s2
+        else if (p1.getX() > p2.getX()) // si X del s1 es mayor que la X del s2
         {
         	actualizarS2(p2);
         }
@@ -114,11 +114,8 @@ public class LineaHorizonteFussion {
 
         }
     }
-    private int obtenerY(Punto p) {
-    	return p.getY();
-    }
-    private int obtenerX(Punto p) {
-    	return p.getX();
+    private Punto crearPunto() {
+    	return new Punto();
     }
 
 }
