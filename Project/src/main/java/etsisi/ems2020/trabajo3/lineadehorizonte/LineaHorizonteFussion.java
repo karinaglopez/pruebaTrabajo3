@@ -1,0 +1,119 @@
+package etsisi.ems2020.trabajo3.lineadehorizonte;
+
+public class LineaHorizonteFussion {
+	private LineaHorizonte s1;
+	private LineaHorizonte s2;
+	private LineaHorizonte salida;
+	private int s1y;
+	private int s2y;
+	private int prev;
+	
+	public LineaHorizonteFussion(LineaHorizonte s1,LineaHorizonte s2) {
+    	this.s1y = -1;
+    	this.s2y = -1;
+    	this.prev = -1;
+        this.salida = new LineaHorizonte(); // LineaHorizonte de salida
+        this.s1 = s1;
+        this.s2 = s2;
+	}
+
+    public LineaHorizonte setLineaHorizonteFussion()
+    {
+    	
+        comenzarFussion();
+        vaciarS1();
+        vaciarS2();
+        return this.salida;
+    }
+    public void comenzarFussion() {
+        Punto p1 = new Punto();       
+        Punto p2 = new Punto();  
+        Punto paux = new Punto();
+    	
+        while ((!this.s1.isEmpty()) && (!this.s2.isEmpty())) 
+        {
+            paux = new Punto();  // Inicializamos la variable paux
+            p1 = s1.getPunto(0); // guardamos el primer elemento de s1
+            p2 = s2.getPunto(0); // guardamos el primer elemento de s2
+            comprobarValorX(p1,p2);
+        }
+    }
+    public void vaciarS1() {
+    	Punto paux = new Punto();
+        while ((!this.s1.isEmpty())) //si aun nos quedan elementos en el s1
+        {
+            paux=this.s1.getPunto(0); // guardamos en paux el primer punto
+            actualizarPunto(paux);
+            this.s1.borrarPunto(0); // en cualquier caso eliminamos el punto de s1 (tanto si se añade como si no es valido)
+        }
+    }
+    public void vaciarS2() {
+    	Punto paux = new Punto();
+        while((!this.s2.isEmpty())) //si aun nos quedan elementos en el s2
+        {
+            paux=this.s2.getPunto(0); // guardamos en paux el primer punto
+            actualizarPunto(paux);
+            this.s2.borrarPunto(0); // en cualquier caso eliminamos el punto de s2 (tanto si se añade como si no es valido)
+        }
+    }
+    public void actualizarPunto(Punto paux) {
+        if (paux.getY()!=this.prev) // si este maximo no es igual al del segmento anterior
+        {
+            this.salida.addPunto(paux); // añadimos el punto al LineaHorizonte de salida
+            this.prev = paux.getY();    // actualizamos prev
+        }
+    }
+    public void actualizarS1(Punto p1) {
+    	Punto paux = new Punto();
+    	paux.setX(p1.getX());                // guardamos en paux esa X
+        paux.setY(Math.max(p1.getY(), this.s2y)); // y hacemos que el maximo entre la Y del s1 y la altura previa del s2 sea la altura Y de paux
+        
+        actualizarPunto(paux);
+
+        this.s1y = p1.getY();   // actualizamos la altura s1y
+        this.s1.borrarPunto(0); // en cualquier caso eliminamos el punto de s1 (tanto si se añade como si no es valido)
+    
+    }
+    public void actualizarS2(Punto p2){
+    	Punto paux = new Punto();
+        paux.setX(p2.getX());                // guardamos en paux esa X
+        paux.setY(Math.max(p2.getY(), this.s1y)); // y hacemos que el maximo entre la Y del s2 y la altura previa del s1 sea la altura Y de paux
+
+        actualizarPunto(paux);
+    
+        this.s2y = p2.getY();   // actualizamos la altura s2y
+        this.s2.borrarPunto(0); // en cualquier caso eliminamos el punto de s2 (tanto si se añade como si no es valido)
+    }
+    public void actualizarS1yS2(Punto p1, Punto p2) {
+        if ((p1.getY() > p2.getY()) && (p1.getY()!=this.prev)) // guardaremos aquel punto que tenga la altura mas alta
+        {
+            this.salida.addPunto(p1);
+            this.prev = p1.getY();
+        }
+        if ((p1.getY() <= p2.getY()) && (p2.getY()!=prev))
+        {
+            this.salida.addPunto(p2);
+            this.prev = p2.getY();
+        }
+        this.s1y = p1.getY();   // actualizamos la s1y e s2y
+        this.s2y = p2.getY();
+        this.s1.borrarPunto(0); // eliminamos el punto del s1 y del s2
+        this.s2.borrarPunto(0);
+    }
+    public void comprobarValorX(Punto p1, Punto p2) {
+        if (p1.getX() < p2.getX()) // si X del s1 es menor que la X del s2
+        {
+        	actualizarS1(p1);
+        }
+        else if (p1.getX() > p2.getX()) // si X del s1 es mayor que la X del s2
+        {
+        	actualizarS2(p2);
+        }
+        else // si la X del s1 es igual a la X del s2
+        {
+        	actualizarS1yS2(p1, p2);
+
+        }
+    }
+
+}

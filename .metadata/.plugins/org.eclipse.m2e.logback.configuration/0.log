@@ -1,0 +1,85 @@
+2021-05-01 12:43:44,755 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-05-01 12:44:45,168 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: etsisi.ems2020.trabajo3:lineadehorizonte:0.0.1-SNAPSHOT @ /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/pom.xml.
+2021-05-01 12:44:45,529 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Project/src/main/java
+2021-05-01 12:44:45,532 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Project/src/test/java
+2021-05-01 12:44:47,522 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2021-05-01 12:44:48,821 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:44:48,821 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 12:44:48,824 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:44:48,824 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 12:45:21,674 [Worker-4: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project
+2021-05-01 12:45:21,684 [Worker-4: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2021-05-01 12:45:24,987 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:45:24,987 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 12:45:24,988 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:45:24,988 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 12:48:07,293 [Worker-12: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project
+2021-05-01 12:48:07,300 [Worker-12: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2021-05-01 12:48:10,080 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:48:10,083 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 12:48:10,085 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:48:10,085 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 12:48:42,406 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:48:42,407 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 12:48:42,408 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:48:42,408 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 12:48:48,445 [Worker-10: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project
+2021-05-01 12:48:48,445 [Worker-10: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2021-05-01 12:48:51,865 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:48:51,865 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 12:48:51,867 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:48:51,867 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 12:49:16,382 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:49:16,393 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 12:49:16,394 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 12:49:16,395 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 13:27:51,868 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:27:51,870 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 13:27:51,871 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:27:51,871 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 13:28:04,394 [Worker-31: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project
+2021-05-01 13:28:04,394 [Worker-31: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2021-05-01 13:28:08,011 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:28:08,011 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 13:28:08,013 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:28:08,013 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 13:38:21,957 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:38:21,958 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 13:38:21,959 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:38:21,959 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 13:56:16,003 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:56:16,004 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 13:56:16,005 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:56:16,005 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 13:57:05,506 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:57:05,508 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 13:57:05,509 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 13:57:05,509 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 14:18:09,403 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:18:09,404 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 14:18:09,405 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:18:09,405 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 14:26:30,831 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:26:30,832 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 14:26:30,833 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:26:30,833 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 14:31:09,460 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:31:09,460 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 14:31:09,462 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:31:09,463 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 14:31:11,169 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:31:11,169 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 14:31:11,174 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:31:11,174 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 14:31:30,924 [Worker-60: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project
+2021-05-01 14:31:30,924 [Worker-60: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2021-05-01 14:31:33,793 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:31:33,795 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 14:31:33,798 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:31:33,798 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 14:33:12,973 [Worker-58: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project
+2021-05-01 14:33:12,973 [Worker-58: Launching Executing install in _Users_karinalopez_Downloads_EM_trabajo3 prueba_Project] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2021-05-01 14:33:16,447 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:33:16,447 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 14:33:16,452 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 14:33:16,452 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
