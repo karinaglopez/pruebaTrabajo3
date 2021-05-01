@@ -19,6 +19,7 @@ public class LineaHorizonteFussion {
 
     public LineaHorizonte setLineaHorizonteFussion()
     {
+    	
         comenzarFussion();
         vaciarS1();
         vaciarS2();
