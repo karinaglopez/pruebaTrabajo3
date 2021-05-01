@@ -25,20 +25,20 @@ public class LineaHorizonteFussion {
         return this.salida;
     }
     private void comenzarFussion() {
-        Punto p1 = crearPunto();       
-        Punto p2 = crearPunto();  
-        Punto paux = crearPunto();
+        Punto p1 = new Punto();       
+        Punto p2 = new Punto();  
+        Punto paux = new Punto();
     	
         while ((!this.s1.isEmpty()) && (!this.s2.isEmpty())) 
         {
-            paux = crearPunto();  // Inicializamos la variable paux
+            paux = new Punto();  // Inicializamos la variable paux
             p1 = s1.getPunto(0); // guardamos el primer elemento de s1
             p2 = s2.getPunto(0); // guardamos el primer elemento de s2
             comprobarValorX(p1,p2);
         }
     }
     private void vaciarS1() {
-    	Punto paux = crearPunto();
+    	Punto paux = new Punto();
         while ((!this.s1.isEmpty())) //si aun nos quedan elementos en el s1
         {
             paux=this.s1.getPunto(0); // guardamos en paux el primer punto
@@ -47,7 +47,7 @@ public class LineaHorizonteFussion {
         }
     }
     private void vaciarS2() {
-    	Punto paux = crearPunto();
+    	Punto paux = new Punto();
         while((!this.s2.isEmpty())) //si aun nos quedan elementos en el s2
         {
             paux=this.s2.getPunto(0); // guardamos en paux el primer punto
@@ -63,7 +63,7 @@ public class LineaHorizonteFussion {
         }
     }
     private void actualizarS1(Punto p1) {
-    	Punto paux = crearPunto();
+    	Punto paux = new Punto();
     	paux.setX(p1.getX());                // guardamos en paux esa X
         paux.setY(Math.max(p1.getY(), this.s2y)); // y hacemos que el maximo entre la Y del s1 y la altura previa del s2 sea la altura Y de paux
         
@@ -74,7 +74,7 @@ public class LineaHorizonteFussion {
     
     }
     private void actualizarS2(Punto p2){
-    	Punto paux = crearPunto();
+    	Punto paux = new Punto();
         paux.setX(p2.getX());                // guardamos en paux esa X
         paux.setY(Math.max(p2.getY(), this.s1y)); // y hacemos que el maximo entre la Y del s2 y la altura previa del s1 sea la altura Y de paux
 
@@ -113,9 +113,6 @@ public class LineaHorizonteFussion {
         	actualizarS1yS2(p1, p2);
 
         }
-    }
-    private Punto crearPunto() {
-    	return new Punto();
     }
 
 }

@@ -149,3 +149,7 @@
 2021-05-01 22:47:12,968 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
 2021-05-01 22:47:12,969 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-05-01 22:47:12,969 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
+2021-05-01 22:51:00,425 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 22:51:00,425 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/main/resources
+2021-05-01 22:51:00,426 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-01 22:51:00,426 [Worker-119: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/karinalopez/Downloads/EM/trabajo3 prueba/Project/src/test/resources
