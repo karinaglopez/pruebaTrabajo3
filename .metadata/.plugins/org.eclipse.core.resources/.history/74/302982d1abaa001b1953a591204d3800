@@ -57,7 +57,7 @@ public class LineaHorizonte {
     {	
         try
         {
-        	PrintWriter out = new PrintWriter (new FileWriter(fichero));
+            out = new PrintWriter (new FileWriter(fichero));
             actualizarFichero(out);
             out.close();
         }
