@@ -31,35 +31,35 @@ public class LineaHorizonteFussion {
     	
         while ((!isLineaVacia(s1)) && (!isLineaVacia(s2))) 
         {
-            paux = crearPunto(0,0);  
-            p1 = obtenerPunto(this.s1,0); 
-            p2 = obtenerPunto(this.s2,0);
+            paux = crearPunto(0,0);  // Inicializamos la variable paux
+            p1 = obtenerPunto(this.s1,0); // guardamos el primer elemento de s1
+            p2 = obtenerPunto(this.s2,0); // guardamos el primer elemento de s2
             comprobarValorX(p1,p2);
         }
     }
     private void vaciarS1() {
     	Punto paux = crearPunto(0,0);
-        while ((!isLineaVacia(s1))) 
+        while ((!isLineaVacia(s1))) //si aun nos quedan elementos en el s1
         {
-            paux=obtenerPunto(this.s1,0); 
+            paux=obtenerPunto(this.s1,0); // guardamos en paux el primer punto
             actualizarPunto(paux);
-            borrarPuntoAux(s1,0);
+            borrarPuntoAux(s1,0); // en cualquier caso eliminamos el punto de s1 (tanto si se añade como si no es valido)
         }
     }
     private void vaciarS2() {
     	Punto paux = crearPunto(0,0);
-        while((!isLineaVacia(this.s2))) 
+        while((!isLineaVacia(this.s2))) //si aun nos quedan elementos en el s2
         {
-            paux=obtenerPunto(this.s2,0); 
+            paux=obtenerPunto(this.s2,0); // guardamos en paux el primer punto
             actualizarPunto(paux);
-            borrarPuntoAux(this.s2,0); 
+            borrarPuntoAux(this.s2,0); // en cualquier caso eliminamos el punto de s2 (tanto si se añade como si no es valido)
         }
     }
     private void actualizarPunto(Punto paux) {
-        if (obtenerY(paux)!=this.prev) 
+        if (obtenerY(paux)!=this.prev) // si este maximo no es igual al del segmento anterior
         {
-            aniadirPunto(this.salida, paux); 
-            this.prev = obtenerY(paux);   
+            aniadirPunto(this.salida, paux); // añadimos el punto al LineaHorizonte de salida
+            this.prev = obtenerY(paux);    // actualizamos prev
         }
     }
     private void actualizarS1(Punto p1) {
@@ -67,8 +67,8 @@ public class LineaHorizonteFussion {
         
         actualizarPunto(paux);
 
-        this.s1y = obtenerY(p1);   
-        borrarPuntoAux(this.s1,0); 
+        this.s1y = obtenerY(p1);   // actualizamos la altura s1y
+        borrarPuntoAux(this.s1,0); // en cualquier caso eliminamos el punto de s1 (tanto si se añade como si no es valido)
     
     }
     private void actualizarS2(Punto p2){
@@ -76,11 +76,11 @@ public class LineaHorizonteFussion {
        
         actualizarPunto(paux);
     
-        this.s2y = obtenerY(p2);  
-        borrarPuntoAux(this.s2,0); 
+        this.s2y = obtenerY(p2);   // actualizamos la altura s2y
+        borrarPuntoAux(this.s2,0); // en cualquier caso eliminamos el punto de s2 (tanto si se añade como si no es valido)
     }
     private void actualizarS1yS2(Punto p1, Punto p2) {
-        if ((obtenerY(p1) > obtenerY(p2)) && (obtenerY(p1)!=this.prev)) 
+        if ((obtenerY(p1) > obtenerY(p2)) && (obtenerY(p1)!=this.prev)) // guardaremos aquel punto que tenga la altura mas alta
         {
         	aniadirPunto(this.salida, p1);
             this.prev = obtenerY(p1);
@@ -90,21 +90,21 @@ public class LineaHorizonteFussion {
         	aniadirPunto(this.salida, p2);
             this.prev = obtenerY(p2);
         }
-        this.s1y = obtenerY(p1);  
+        this.s1y = obtenerY(p1);   // actualizamos la s1y e s2y
         this.s2y = obtenerY(p2);
         borrarPuntoAux(this.s1,0);
         borrarPuntoAux(this.s2,0);
     }
     private void comprobarValorX(Punto p1, Punto p2) {
-        if (obtenerX(p1) < obtenerX(p2))
+        if (obtenerX(p1) < obtenerX(p2)) // si X del s1 es menor que la X del s2
         {
         	actualizarS1(p1);
         }
-        else if (obtenerX(p1) > obtenerX(p2)) 
+        else if (obtenerX(p1) > obtenerX(p2)) // si X del s1 es mayor que la X del s2
         {
         	actualizarS2(p2);
         }
-        else
+        else // si la X del s1 es igual a la X del s2
         {
         	actualizarS1yS2(p1, p2);
 
