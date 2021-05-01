@@ -52,7 +52,7 @@ public class Ciudad {
     
 private LineaHorizonte crearLineaHorizonte(int pi, int pd)
 {
-LineaHorizonte linea = nuevaLineaHorizonte(); // LineaHorizonte de salida
+LineaHorizonte linea = new LineaHorizonte(); // LineaHorizonte de salida
 Edificio edificio = new Edificio();    
 //Caso base, la ciudad solo tiene un edificio, el perfil es el de ese edificio. 
 if(pi==pd) 
@@ -73,15 +73,16 @@ return linea;
 }
 
 private LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
-	LineaHorizonte linea = nuevaLineaHorizonte(); 
+	LineaHorizonte linea = new LineaHorizonte(); 
 	Punto p1 = nuevoPunto();   
 	Punto p2 = nuevoPunto();
 	aniadirX(p1, edificio.getXi());
 	aniadirY(p1,edificio.getY());
 	aniadirX(p2, edificio.getXd());
 	aniadirY(p2,0);
-	aniadirPunto(linea, p1);
-	aniadirPunto(linea, p2);
+
+	linea.addPunto(p1);      
+	linea.addPunto(p2);
 	return linea;
 	
 }
@@ -104,9 +105,9 @@ private LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
     
     public void imprimirDetallesS1yS2(LineaHorizonte s1,LineaHorizonte s2) {
         System.out.println("==== S1 ====");
-        imprimirLinea(s1);
+        s1.imprimir();
         System.out.println("==== S2 ====");
-        imprimirLinea(s2);
+        s2.imprimir();
         System.out.println("\n");
     }
     /*
@@ -154,14 +155,5 @@ private LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
     }
     private Punto nuevoPunto() {
     	return new Punto();
-    }
-    private LineaHorizonte nuevaLineaHorizonte() {
-    	return new LineaHorizonte();
-    }
-    private void imprimirLinea(LineaHorizonte s) {
-    	s.imprimir();
-    }
-    private void aniadirPunto(LineaHorizonte s, Punto p) {
-    	s.addPunto(p);
     }
 }

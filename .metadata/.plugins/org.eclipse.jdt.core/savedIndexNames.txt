@@ -3,7 +3,6 @@ INDEX VERSION 1.131+/Users/karinalopez/Downloads/EM/trabajo3 prueba/.metadata/.p
 1335909188.index
 2513357563.index
 3523961465.index
-941005215.index
 4185249600.index
 2501727591.index
 1820749328.index

@@ -25,20 +25,20 @@ public class LineaHorizonteFussion {
         return this.salida;
     }
     private void comenzarFussion() {
-        Punto p1 = crearPunto(0,0);       
-        Punto p2 = crearPunto(0,0);  
-        Punto paux = crearPunto(0,0);
+        Punto p1 = nuevoPunto();       
+        Punto p2 = nuevoPunto();  
+        Punto paux = nuevoPunto();
     	
         while ((!isLineaVacia(s1)) && (!isLineaVacia(s2))) 
         {
-            paux = crearPunto(0,0);  // Inicializamos la variable paux
+            paux = nuevoPunto();  // Inicializamos la variable paux
             p1 = obtenerPunto(this.s1,0); // guardamos el primer elemento de s1
             p2 = obtenerPunto(this.s2,0); // guardamos el primer elemento de s2
             comprobarValorX(p1,p2);
         }
     }
     private void vaciarS1() {
-    	Punto paux = crearPunto(0,0);
+    	Punto paux = nuevoPunto();
         while ((!isLineaVacia(s1))) //si aun nos quedan elementos en el s1
         {
             paux=obtenerPunto(this.s1,0); // guardamos en paux el primer punto
@@ -47,7 +47,7 @@ public class LineaHorizonteFussion {
         }
     }
     private void vaciarS2() {
-    	Punto paux = crearPunto(0,0);
+    	Punto paux = nuevoPunto();
         while((!isLineaVacia(this.s2))) //si aun nos quedan elementos en el s2
         {
             paux=obtenerPunto(this.s2,0); // guardamos en paux el primer punto
@@ -63,7 +63,7 @@ public class LineaHorizonteFussion {
         }
     }
     private void actualizarS1(Punto p1) {
-    	Punto paux = crearPunto(obtenerX(p1), Math.max(obtenerY(p1), this.s2y));
+    	Punto paux = crearPunto(obtenerX(p1), Math.max(p1.getY(), this.s2y));
         
         actualizarPunto(paux);
 
@@ -119,6 +119,9 @@ public class LineaHorizonteFussion {
     private Punto crearPunto(int x, int y) {
     	Punto punto = new Punto(x, y);
         return punto;
+    }
+    private Punto nuevoPunto() {
+    	return new Punto();
     }
     private LineaHorizonte nuevaLineaHorizonte () {
     	return new LineaHorizonte();
