@@ -59,11 +59,13 @@ public class LineaHorizonteFussion {
         if (obtenerY(paux)!=this.prev) // si este maximo no es igual al del segmento anterior
         {
             this.salida.addPunto(paux); // añadimos el punto al LineaHorizonte de salida
-            this.prev = obtenerY(paux);    // actualizamos prev
+            this.prev = paux.getY();    // actualizamos prev
         }
     }
     private void actualizarS1(Punto p1) {
-    	Punto paux = aniadirPunto(obtenerX(p1), Math.max(p1.getY(), this.s2y));
+    	Punto paux = new Punto();
+    	paux.setX(obtenerX(p1));                // guardamos en paux esa X
+        paux.setY(Math.max(p1.getY(), this.s2y)); // y hacemos que el maximo entre la Y del s1 y la altura previa del s2 sea la altura Y de paux
         
         actualizarPunto(paux);
 
@@ -72,8 +74,10 @@ public class LineaHorizonteFussion {
     
     }
     private void actualizarS2(Punto p2){
-    	Punto paux = aniadirPunto(obtenerX(p2), Math.max(obtenerY(p2), this.s1y));
-       
+    	Punto paux =new Punto();
+        paux.setX(obtenerX(p2));                // guardamos en paux esa X
+        paux.setY(Math.max(obtenerY(p2), this.s1y)); // y hacemos que el maximo entre la Y del s2 y la altura previa del s1 sea la altura Y de paux
+
         actualizarPunto(paux);
     
         this.s2y = obtenerY(p2);   // actualizamos la altura s2y
@@ -83,7 +87,7 @@ public class LineaHorizonteFussion {
         if ((obtenerY(p1) > obtenerY(p2)) && (obtenerY(p1)!=this.prev)) // guardaremos aquel punto que tenga la altura mas alta
         {
             this.salida.addPunto(p1);
-            this.prev = obtenerY(p1);
+            this.prev = p1.getY();
         }
         if ((obtenerY(p1) <= obtenerY(p2)) && (obtenerY(p2)!=prev))
         {
@@ -115,12 +119,6 @@ public class LineaHorizonteFussion {
     }
     private int obtenerX(Punto p) {
     	return p.getX();
-    }
-    private Punto aniadirPunto(int x, int y) {
-    	Punto punto = new Punto();
-    	punto.setX(x);                // guardamos en paux esa X
-        punto.setY(y);
-        return punto;
     }
 
 }

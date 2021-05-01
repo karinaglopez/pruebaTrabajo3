@@ -72,8 +72,10 @@ public class LineaHorizonteFussion {
     
     }
     private void actualizarS2(Punto p2){
-    	Punto paux = aniadirPunto(obtenerX(p2), Math.max(obtenerY(p2), this.s1y));
-       
+    	Punto paux =new Punto();
+        paux.setX(obtenerX(p2));                // guardamos en paux esa X
+        paux.setY(Math.max(obtenerY(p2), this.s1y)); // y hacemos que el maximo entre la Y del s2 y la altura previa del s1 sea la altura Y de paux
+
         actualizarPunto(paux);
     
         this.s2y = obtenerY(p2);   // actualizamos la altura s2y
@@ -83,7 +85,7 @@ public class LineaHorizonteFussion {
         if ((obtenerY(p1) > obtenerY(p2)) && (obtenerY(p1)!=this.prev)) // guardaremos aquel punto que tenga la altura mas alta
         {
             this.salida.addPunto(p1);
-            this.prev = obtenerY(p1);
+            this.prev = p1.getY();
         }
         if ((obtenerY(p1) <= obtenerY(p2)) && (obtenerY(p2)!=prev))
         {
