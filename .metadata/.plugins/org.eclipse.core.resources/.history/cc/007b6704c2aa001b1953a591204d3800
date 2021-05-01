@@ -7,8 +7,8 @@ package etsisi.ems2020.trabajo3.lineadehorizonte;
  * cartesiano de coordendas
  */
 public class Punto {
-	private int x;
-    private int y;
+	int x;
+    int y;
 
     /*
      * Constructor sin par�metros de un punto en concreto
