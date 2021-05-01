@@ -43,9 +43,7 @@ public class LineaHorizonte {
             actualizarFichero(out);
             out.close();
         }
-        catch(Exception e){
-        	System.out.println("Error al guardar la línea");
-        }
+        catch(Exception e){}
     }
     
     public void actualizarFichero(PrintWriter out){

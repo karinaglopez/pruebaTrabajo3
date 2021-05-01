@@ -102,9 +102,7 @@ private LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
                 this.addEdificio(new Edificio(sr.nextInt(), sr.nextInt(), sr.nextInt()));
             }
         }
-        catch(Exception e){
-        	System.out.println("Error al cargar los edificios");
-        } 
+        catch(Exception e){} 
            
     }
 
