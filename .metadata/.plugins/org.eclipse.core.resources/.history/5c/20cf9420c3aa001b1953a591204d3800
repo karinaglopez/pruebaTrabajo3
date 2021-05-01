@@ -25,20 +25,20 @@ public class LineaHorizonteFussion {
         return this.salida;
     }
     private void comenzarFussion() {
-        Punto p1 = nuevoPunto();       
-        Punto p2 = nuevoPunto();  
-        Punto paux = nuevoPunto();
+        Punto p1 = new Punto();       
+        Punto p2 = new Punto();  
+        Punto paux = new Punto();
     	
         while ((!this.s1.isEmpty()) && (!this.s2.isEmpty())) 
         {
-            paux = nuevoPunto();  // Inicializamos la variable paux
+            paux = new Punto();  // Inicializamos la variable paux
             p1 = s1.getPunto(0); // guardamos el primer elemento de s1
             p2 = s2.getPunto(0); // guardamos el primer elemento de s2
             comprobarValorX(p1,p2);
         }
     }
     private void vaciarS1() {
-    	Punto paux = nuevoPunto();
+    	Punto paux = new Punto();
         while ((!this.s1.isEmpty())) //si aun nos quedan elementos en el s1
         {
             paux=this.s1.getPunto(0); // guardamos en paux el primer punto
@@ -47,7 +47,7 @@ public class LineaHorizonteFussion {
         }
     }
     private void vaciarS2() {
-    	Punto paux = nuevoPunto();
+    	Punto paux = new Punto();
         while((!this.s2.isEmpty())) //si aun nos quedan elementos en el s2
         {
             paux=this.s2.getPunto(0); // guardamos en paux el primer punto
@@ -117,11 +117,10 @@ public class LineaHorizonteFussion {
     	return p.getX();
     }
     private Punto aniadirPunto(int x, int y) {
-    	Punto punto = new Punto(x, y);
+    	Punto punto = new Punto();
+    	punto.setX(x);                // guardamos en paux esa X
+        punto.setY(y);
         return punto;
-    }
-    private Punto nuevoPunto() {
-    	return new Punto();
     }
 
 }
