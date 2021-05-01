@@ -37,7 +37,7 @@ public class LineaHorizonteFussion {
             comprobarValorX(p1,p2);
         }
     }
-    private void vaciarS1() {
+    public void vaciarS1() {
     	Punto paux = new Punto();
         while ((!this.s1.isEmpty())) //si aun nos quedan elementos en el s1
         {
@@ -46,7 +46,7 @@ public class LineaHorizonteFussion {
             this.s1.borrarPunto(0); // en cualquier caso eliminamos el punto de s1 (tanto si se añade como si no es valido)
         }
     }
-    private void vaciarS2() {
+    public void vaciarS2() {
     	Punto paux = new Punto();
         while((!this.s2.isEmpty())) //si aun nos quedan elementos en el s2
         {
@@ -55,14 +55,14 @@ public class LineaHorizonteFussion {
             this.s2.borrarPunto(0); // en cualquier caso eliminamos el punto de s2 (tanto si se añade como si no es valido)
         }
     }
-    private void actualizarPunto(Punto paux) {
+    public void actualizarPunto(Punto paux) {
         if (paux.getY()!=this.prev) // si este maximo no es igual al del segmento anterior
         {
             this.salida.addPunto(paux); // añadimos el punto al LineaHorizonte de salida
             this.prev = paux.getY();    // actualizamos prev
         }
     }
-    private void actualizarS1(Punto p1) {
+    public void actualizarS1(Punto p1) {
     	Punto paux = new Punto();
     	paux.setX(p1.getX());                // guardamos en paux esa X
         paux.setY(Math.max(p1.getY(), this.s2y)); // y hacemos que el maximo entre la Y del s1 y la altura previa del s2 sea la altura Y de paux
@@ -73,7 +73,7 @@ public class LineaHorizonteFussion {
         this.s1.borrarPunto(0); // en cualquier caso eliminamos el punto de s1 (tanto si se añade como si no es valido)
     
     }
-    private void actualizarS2(Punto p2){
+    public void actualizarS2(Punto p2){
     	Punto paux = new Punto();
         paux.setX(p2.getX());                // guardamos en paux esa X
         paux.setY(Math.max(p2.getY(), this.s1y)); // y hacemos que el maximo entre la Y del s2 y la altura previa del s1 sea la altura Y de paux
@@ -83,7 +83,7 @@ public class LineaHorizonteFussion {
         this.s2y = p2.getY();   // actualizamos la altura s2y
         this.s2.borrarPunto(0); // en cualquier caso eliminamos el punto de s2 (tanto si se añade como si no es valido)
     }
-    private void actualizarS1yS2(Punto p1, Punto p2) {
+    public void actualizarS1yS2(Punto p1, Punto p2) {
         if ((p1.getY() > p2.getY()) && (p1.getY()!=this.prev)) // guardaremos aquel punto que tenga la altura mas alta
         {
             this.salida.addPunto(p1);
@@ -99,7 +99,7 @@ public class LineaHorizonteFussion {
         this.s1.borrarPunto(0); // eliminamos el punto del s1 y del s2
         this.s2.borrarPunto(0);
     }
-    private void comprobarValorX(Punto p1, Punto p2) {
+    public void comprobarValorX(Punto p1, Punto p2) {
         if (p1.getX() < p2.getX()) // si X del s1 es menor que la X del s2
         {
         	actualizarS1(p1);

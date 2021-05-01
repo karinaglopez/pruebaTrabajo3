@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="etsisi.ems2020.trabajo3.lineadehorizonte.CiudadTest" time="0.01" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="etsisi.ems2020.trabajo3.lineadehorizonte.CiudadTest" time="0.018" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib"/>
@@ -27,7 +27,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/karinalopez/Downloads/EM/trabajo3 prueba/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf2916180706843596016.tmp"/>
+    <property name="classworlds.conf" value="/Users/karinalopez/Downloads/EM/trabajo3 prueba/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf13851435635456023430.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/karinalopez/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -63,6 +63,6 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="etsisi.ems2020.trabajo3.lineadehorizonte.CiudadTest" name="testGetLineaHorizonte1" time="0.01"/>
+  <testcase classname="etsisi.ems2020.trabajo3.lineadehorizonte.CiudadTest" name="testGetLineaHorizonte1" time="0.018"/>
   <testcase classname="etsisi.ems2020.trabajo3.lineadehorizonte.CiudadTest" name="testGetLineaHorizonte2" time="0"/>
 </testsuite>

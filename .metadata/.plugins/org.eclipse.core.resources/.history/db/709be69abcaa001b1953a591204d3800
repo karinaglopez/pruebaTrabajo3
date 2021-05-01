@@ -72,7 +72,7 @@ linea = LineaHorizonteFussion(s1,s2);
 return linea;
 }
 
-private LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
+public LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
 	LineaHorizonte linea = new LineaHorizonte(); 
 	Punto p1 = new Punto();   
 	Punto p2 = new Punto();
