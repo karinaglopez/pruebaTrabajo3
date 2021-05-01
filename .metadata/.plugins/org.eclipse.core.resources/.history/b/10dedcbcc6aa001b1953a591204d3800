@@ -74,13 +74,13 @@ return linea;
 
 private LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
 	LineaHorizonte linea = new LineaHorizonte(); 
-	Punto p1 = nuevoPunto();   
-	Punto p2 = nuevoPunto();
-	aniadirX(p1, edificio.getXi());
-	aniadirY(p1,edificio.getY());
-	aniadirX(p2, edificio.getXd());
-	aniadirY(p2,0);
-
+	Punto p1 = new Punto();   
+	Punto p2 = new Punto();
+	p1.setX(edificio.getXi());       
+	p1.setY(edificio.getY());        // guardo la altura
+	p2.setX(edificio.getXd());       
+	p2.setY(0);                      // como el edificio se compone de 3 variables, en la Y de p2 le añadiremos un 0
+	//Añado los puntos a la línea del horizonte
 	linea.addPunto(p1);      
 	linea.addPunto(p2);
 	return linea;
@@ -145,15 +145,5 @@ private LineaHorizonte aniadirUnicoEdificio (Edificio edificio) {
             xd=(int)(xi+(Math.random()*100));
             this.addEdificio(new Edificio(xi,y,xd));
         }
-    }
-    
-    private void aniadirY(Punto p, int valor) {
-    	p.setY(valor);
-    }
-    private void aniadirX(Punto p, int valor) {
-    	p.setX(valor);
-    }
-    private Punto nuevoPunto() {
-    	return new Punto();
     }
 }
